@@ -1,0 +1,395 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D68210E22BF7964F008F4916 /* Nutri_BalanceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68210E12BF7964F008F4916 /* Nutri_BalanceApp.swift */; };
+		D68210E82BF79650008F4916 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D68210E72BF79650008F4916 /* Assets.xcassets */; };
+		D68210EB2BF79650008F4916 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D68210EA2BF79650008F4916 /* Preview Assets.xcassets */; };
+		D68210F22BF79C44008F4916 /* MacroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68210F12BF79C44008F4916 /* MacroView.swift */; };
+		D68210F42BF7C281008F4916 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68210F32BF7C281008F4916 /* Extensions.swift */; };
+		D68210F62BF7C4FF008F4916 /* MacroHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68210F52BF7C4FF008F4916 /* MacroHeaderView.swift */; };
+		D68210F82BF7CAC2008F4916 /* OpenAI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68210F72BF7CAC2008F4916 /* OpenAI.swift */; };
+		D68210FA2BF7CD22008F4916 /* RequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68210F92BF7CD22008F4916 /* RequestModel.swift */; };
+		D68210FC2BF7CD4B008F4916 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68210FB2BF7CD4B008F4916 /* Secrets.swift */; };
+		D68210FE2BF7D1A4008F4916 /* ResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68210FD2BF7D1A4008F4916 /* ResponseModel.swift */; };
+		D68211012BF85C92008F4916 /* Macro.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68211002BF85C92008F4916 /* Macro.swift */; };
+		D68211032BF864BF008F4916 /* AddMacroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68211022BF864BF008F4916 /* AddMacroView.swift */; };
+		D68211052BF8A23C008F4916 /* MacroDayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68211042BF8A23C008F4916 /* MacroDayView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D68210DE2BF7964F008F4916 /* Nutri Balance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Nutri Balance.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D68210E12BF7964F008F4916 /* Nutri_BalanceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nutri_BalanceApp.swift; sourceTree = "<group>"; };
+		D68210E72BF79650008F4916 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D68210EA2BF79650008F4916 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D68210F12BF79C44008F4916 /* MacroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacroView.swift; sourceTree = "<group>"; };
+		D68210F32BF7C281008F4916 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		D68210F52BF7C4FF008F4916 /* MacroHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacroHeaderView.swift; sourceTree = "<group>"; };
+		D68210F72BF7CAC2008F4916 /* OpenAI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAI.swift; sourceTree = "<group>"; };
+		D68210F92BF7CD22008F4916 /* RequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestModel.swift; sourceTree = "<group>"; };
+		D68210FB2BF7CD4B008F4916 /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
+		D68210FD2BF7D1A4008F4916 /* ResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseModel.swift; sourceTree = "<group>"; };
+		D68211002BF85C92008F4916 /* Macro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Macro.swift; sourceTree = "<group>"; };
+		D68211022BF864BF008F4916 /* AddMacroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMacroView.swift; sourceTree = "<group>"; };
+		D68211042BF8A23C008F4916 /* MacroDayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacroDayView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D68210DB2BF7964F008F4916 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D68210D52BF7964F008F4916 = {
+			isa = PBXGroup;
+			children = (
+				D68210E02BF7964F008F4916 /* Nutri Balance */,
+				D68210DF2BF7964F008F4916 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D68210DF2BF7964F008F4916 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D68210DE2BF7964F008F4916 /* Nutri Balance.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D68210E02BF7964F008F4916 /* Nutri Balance */ = {
+			isa = PBXGroup;
+			children = (
+				D68210E12BF7964F008F4916 /* Nutri_BalanceApp.swift */,
+				D68210F12BF79C44008F4916 /* MacroView.swift */,
+				D68211022BF864BF008F4916 /* AddMacroView.swift */,
+				D68210F72BF7CAC2008F4916 /* OpenAI.swift */,
+				D68210FB2BF7CD4B008F4916 /* Secrets.swift */,
+				D68210FF2BF7D1C5008F4916 /* Model */,
+				D68210F52BF7C4FF008F4916 /* MacroHeaderView.swift */,
+				D68211042BF8A23C008F4916 /* MacroDayView.swift */,
+				D68210F32BF7C281008F4916 /* Extensions.swift */,
+				D68210E72BF79650008F4916 /* Assets.xcassets */,
+				D68210E92BF79650008F4916 /* Preview Content */,
+			);
+			path = "Nutri Balance";
+			sourceTree = "<group>";
+		};
+		D68210E92BF79650008F4916 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				D68210EA2BF79650008F4916 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D68210FF2BF7D1C5008F4916 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D68211002BF85C92008F4916 /* Macro.swift */,
+				D68210FD2BF7D1A4008F4916 /* ResponseModel.swift */,
+				D68210F92BF7CD22008F4916 /* RequestModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D68210DD2BF7964F008F4916 /* Nutri Balance */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D68210EE2BF79650008F4916 /* Build configuration list for PBXNativeTarget "Nutri Balance" */;
+			buildPhases = (
+				D68210DA2BF7964F008F4916 /* Sources */,
+				D68210DB2BF7964F008F4916 /* Frameworks */,
+				D68210DC2BF7964F008F4916 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Nutri Balance";
+			productName = "Nutri Balance";
+			productReference = D68210DE2BF7964F008F4916 /* Nutri Balance.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D68210D62BF7964F008F4916 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1530;
+				LastUpgradeCheck = 1530;
+				TargetAttributes = {
+					D68210DD2BF7964F008F4916 = {
+						CreatedOnToolsVersion = 15.3;
+					};
+				};
+			};
+			buildConfigurationList = D68210D92BF7964F008F4916 /* Build configuration list for PBXProject "Nutri Balance" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D68210D52BF7964F008F4916;
+			productRefGroup = D68210DF2BF7964F008F4916 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D68210DD2BF7964F008F4916 /* Nutri Balance */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D68210DC2BF7964F008F4916 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D68210EB2BF79650008F4916 /* Preview Assets.xcassets in Resources */,
+				D68210E82BF79650008F4916 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D68210DA2BF7964F008F4916 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D68210FE2BF7D1A4008F4916 /* ResponseModel.swift in Sources */,
+				D68211032BF864BF008F4916 /* AddMacroView.swift in Sources */,
+				D68210FC2BF7CD4B008F4916 /* Secrets.swift in Sources */,
+				D68211052BF8A23C008F4916 /* MacroDayView.swift in Sources */,
+				D68210F22BF79C44008F4916 /* MacroView.swift in Sources */,
+				D68211012BF85C92008F4916 /* Macro.swift in Sources */,
+				D68210F62BF7C4FF008F4916 /* MacroHeaderView.swift in Sources */,
+				D68210F82BF7CAC2008F4916 /* OpenAI.swift in Sources */,
+				D68210FA2BF7CD22008F4916 /* RequestModel.swift in Sources */,
+				D68210E22BF7964F008F4916 /* Nutri_BalanceApp.swift in Sources */,
+				D68210F42BF7C281008F4916 /* Extensions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		D68210EC2BF79650008F4916 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D68210ED2BF79650008F4916 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D68210EF2BF79650008F4916 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Nutri Balance/Preview Content\"";
+				DEVELOPMENT_TEAM = B49LQK4KMN;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "io.iosacademy.Nutri-Balance";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D68210F02BF79650008F4916 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Nutri Balance/Preview Content\"";
+				DEVELOPMENT_TEAM = B49LQK4KMN;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "io.iosacademy.Nutri-Balance";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D68210D92BF7964F008F4916 /* Build configuration list for PBXProject "Nutri Balance" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D68210EC2BF79650008F4916 /* Debug */,
+				D68210ED2BF79650008F4916 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D68210EE2BF79650008F4916 /* Build configuration list for PBXNativeTarget "Nutri Balance" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D68210EF2BF79650008F4916 /* Debug */,
+				D68210F02BF79650008F4916 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D68210D62BF7964F008F4916 /* Project object */;
+}
