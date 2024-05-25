@@ -30,7 +30,7 @@ struct GPTFunctionCall: Decodable {
 
 struct MacroResult: Decodable {
     let food: String
-    let fats: Int
-    let protein: Int
-    let carbs: Int
+    let fats: Double
+    let protein: Double
+    let carbs: Double
 }

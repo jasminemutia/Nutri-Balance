@@ -15,74 +15,74 @@ struct MacroHeaderView: View {
     var body: some View {
         HStack{
             Spacer()
-            
-            VStack{
-                Text("Carbohydrates")
-                    .multilineTextAlignment(.center)
-                    .lineLimit(/*@START_MENU_TOKEN@*/2/*@END_MENU_TOKEN@*/)
-                    .bold()
-                    .font(.title2)
-                    .foregroundColor(Color(hex: "#FFFAE6"))
+            ZStack{
+                HStack{
+                    VStack{
+                       Text("Carbs")
+                           .multilineTextAlignment(.center)
+                           .lineLimit(/*@START_MENU_TOKEN@*/2/*@END_MENU_TOKEN@*/)
+                           .bold()
+                           .font(.title2)
+                           .foregroundColor(Color(hex: "#FFFAE6"))
                     
-                Image("carbohydrates")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 85)
-                Text("\(carbs) g")
-                    .bold()
-                    .font(.system(size: 21))
-                    .foregroundColor(Color(hex: "#FFFAE6"))
+                        Image("carbohydrates")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 85)
+                                    
+                        Text("\(carbs) g")
+                            .bold()
+                            .font(.system(size: 25))
+                            .foregroundColor(Color(hex: "#FFFAE6"))
+                   }
+                    .padding(.leading, 60)
+                    
+                    Spacer()
+                    VStack{
+                        Text("Protein")
+                            .multilineTextAlignment(.center)
+                            .lineLimit(/*@START_MENU_TOKEN@*/2/*@END_MENU_TOKEN@*/)
+                            .bold()
+                            .font(.title2)
+                            .foregroundColor(Color(hex: "#FFFAE6"))
+                        Image("proteins")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 85)
+                        Text("\(proteins) g")
+                            .bold()
+                            .font(.system(size: 25))
+                            .foregroundColor(Color(hex: "#FFFAE6"))
+                    }
+                    Spacer()
+                    
+                    VStack{
+                        Text("Fats")
+                            .multilineTextAlignment(.center)
+                            .bold()
+                            .font(.title2)
+                            .foregroundColor(Color(hex: "#FFFAE6"))
+                        Image("fats")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 85)
+                        Text("\(fats) g")
+                            .bold()
+                            .font(.system(size: 25))
+                            .foregroundColor(Color(hex: "#FFFAE6"))
+                    }
+                    .padding(.trailing, 60)
+                   
+                   
+                }
+                Spacer()
             }
-            .frame(width: 190, height: 170)
+            .frame(width: 750, height: 180)
             .background(
-                RoundedRectangle(cornerRadius: 10)
-                    .fill(Color(hex: "#FF9F66")) // Mengubah warna background
+                    RoundedRectangle(cornerRadius: 10)
+                        .fill(Color(hex: "#FF9F66"))
             )
-            Spacer()
-            
-            VStack{
-                Text("Protein")
-                    .multilineTextAlignment(.center)
-                    .lineLimit(/*@START_MENU_TOKEN@*/2/*@END_MENU_TOKEN@*/)
-                    .bold()
-                    .font(.title2)
-                    .foregroundColor(Color(hex: "#FFFAE6"))
-                Image("proteins")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 85)
-                Text("\(proteins) g")
-                    .bold()
-                    .font(.system(size: 21))
-                    .foregroundColor(Color(hex: "#FFFAE6"))
-            }
-            .frame(width: 190, height: 170)
-            .background(
-                RoundedRectangle(cornerRadius: 10)
-                    .fill(Color(hex: "#FF9F66"))
-            )
-            Spacer()
-            
-            VStack{
-                Text("Fats")
-                    .multilineTextAlignment(.center)
-                    .bold()
-                    .font(.title2)
-                    .foregroundColor(Color(hex: "#FFFAE6"))
-                Image("fats")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 85)
-                Text("\(fats) g")
-                    .bold()
-                    .font(.system(size: 21))
-                    .foregroundColor(Color(hex: "#FFFAE6"))
-            }
-            .frame(width: 190, height: 170)
-            .background(
-                RoundedRectangle(cornerRadius: 10)
-                    .fill(Color(hex: "#FF9F66"))
-            )
+        
             Spacer()
             
         }

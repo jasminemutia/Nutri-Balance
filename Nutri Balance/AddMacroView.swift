@@ -6,10 +6,16 @@
 //
 
 import SwiftUI
+import HealthKit
 
 struct AddMacroView: View {
     @Environment(\.modelContext) var modelContext
     @Environment(\.dismiss) var dismiss
+    @Binding var macros: [Macro]
+//    @Binding var macros: [DailyMacro]
+    @EnvironmentObject var healthStore: HKHealthStore
+
+    @Binding var showModal: Bool
     @State private var food = ""
     @State private var date = Date()
     @State private var showAlert = false
@@ -59,8 +65,12 @@ struct AddMacroView: View {
             } message: {
                 Text("We were unable to verify the food item. Please make sure you enter a valid food item.")
             }
-            Button("", systemImage: "x.circle.fill"){
-                dismiss()
+            Button {
+                showModal = false // Ubah nilai showModal ketika tombol ditekan
+            } label: {
+                 Image(systemName: "x.circle.fill")
+                    .font(.title)
+                    .foregroundColor(Color(hex: "#FF9F66"))
             }
             .font(.title)
             .foregroundColor(Color(hex: "#FF9F66"))
@@ -74,7 +84,9 @@ struct AddMacroView: View {
                 do {
                     let result = try await OpenAIService.shared.sendPromptToChatGPT(message: food)
                     // Handle result here
+                    print("Received result: \(result)")
                     saveMacro(result)
+                    dismiss()
                 } catch {
                     if let openAIError = error as? OpenAIError{
                         switch openAIError {
@@ -91,12 +103,51 @@ struct AddMacroView: View {
     }
     
     private func saveMacro(_ result: MacroResult){
-        let macro = Macro(food: result.food, createdAt: .now, date: .now, carbs: result.carbs, protein: result.protein, fats: result.fats)
+        let macro = Macro(food: result.food, createdAt: .now, date: .now, carbs: Int(result.carbs), protein: Int(result.protein), fats: Int(result.fats))
+        print("Saving macro: \(macro)")
+        macros.append(macro)
         modelContext.insert(macro)
-
+        try? modelContext.save()
+        
+        // Write to HealthKit
+        writeDietaryFat(value: result.fats, date: .now)
+        writeDietaryProtein(value: result.protein, date: .now)
+        writeDietaryCarbohydrates(value: result.carbs, date: .now)
     }
+    
+    private func writeDietaryData(value: Double, type: HKQuantityTypeIdentifier, unit: HKUnit, date: Date) {
+            guard let quantityType = HKObjectType.quantityType(forIdentifier: type) else {
+                print("Invalid quantity type identifier")
+                return
+            }
+            
+            let quantity = HKQuantity(unit: unit, doubleValue: value)
+            let sample = HKQuantitySample(type: quantityType, quantity: quantity, start: date, end: date)
+            
+            healthStore.save(sample) { (success, error) in
+                if let error = error {
+                    print("Error saving \(type): \(error.localizedDescription)")
+                } else {
+                    print("Successfully saved \(type)")
+                }
+            }
+        }
+
+        private func writeDietaryFat(value: Double, date: Date) {
+            writeDietaryData(value: value, type: .dietaryFatTotal, unit: .gram(), date: date)
+        }
+
+        private func writeDietaryProtein(value: Double, date: Date) {
+            writeDietaryData(value: value, type: .dietaryProtein, unit: .gram(), date: date)
+        }
+
+        private func writeDietaryCarbohydrates(value: Double, date: Date) {
+            writeDietaryData(value: value, type: .dietaryCarbohydrates, unit: .gram(), date: date)
+        }
+
+    
 }
 
 #Preview {
-    AddMacroView()
+    AddMacroView(macros: .constant([]), showModal: .constant(false))
 }

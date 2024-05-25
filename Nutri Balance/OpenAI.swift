@@ -42,7 +42,6 @@ class OpenAIService{
         let systemMsg = GPTMessage(role: "system", content: "You are a macronutrient expert.")
         let userMsg = GPTMessage(role: "user", content: message)
         
-        
         let food = GPTFunctionProperty(type: "string", description: "The food item e.g. hamburger")
         let fats = GPTFunctionProperty(type: "integer", description: "The amount of fats in grams of the given food item")
         let protein = GPTFunctionProperty(type: "integer", description: "The amount of protein in grams of the given food item")
@@ -67,9 +66,9 @@ class OpenAIService{
     func sendPromptToChatGPT(message: String) async throws -> MacroResult {
         let urlRequest = try generateURLRequest(httpMethod: .post, message: message)
         let (data, _) = try await URLSession.shared.data(for: urlRequest)
-        print(String(data: data, encoding: .utf8)!)
         
         let result = try JSONDecoder().decode(GPTResponse.self, from: data)
+        print(String(data: data, encoding: .utf8)!)
        
         guard let functionCall = result.choices[0].message.functionCall else {
             throw OpenAIError.noFunctionCall
@@ -81,10 +80,7 @@ class OpenAIService{
         
         let macro = try JSONDecoder().decode(MacroResult.self, from: argData)
        return macro
-
     }
-    
-    
-    
+ 
 }
 

@@ -7,9 +7,38 @@
 
 import SwiftUI
 import SwiftData
+import HealthKit
 
 @main
 struct Nutri_BalanceApp: App {
+    
+    private let healthStore: HKHealthStore
+    
+    init() {
+        guard HKHealthStore.isHealthDataAvailable() else { fatalError("This app requires a device that supports HealthKit") }
+        healthStore = HKHealthStore()
+        requestHealthkitPermissions()
+    }
+    
+    private func requestHealthkitPermissions() {
+        
+        let sampleTypesToRead = Set([
+            HKObjectType.quantityType(forIdentifier: .dietaryFatTotal)!,
+            HKObjectType.quantityType(forIdentifier: .dietaryProtein)!,
+            HKObjectType.quantityType(forIdentifier: .dietaryCarbohydrates)!
+        ])
+        
+        let sampleTypesToWrite = Set([
+                   HKObjectType.quantityType(forIdentifier: .dietaryFatTotal)!,
+                   HKObjectType.quantityType(forIdentifier: .dietaryProtein)!,
+                   HKObjectType.quantityType(forIdentifier: .dietaryCarbohydrates)!
+        ])
+               
+        healthStore.requestAuthorization(toShare: sampleTypesToWrite, read: sampleTypesToRead) { (success, error) in
+                print("Request Authorization -- Success: ", success, " Error: ", error ?? "nil")
+        }
+    }
+    
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
             Macro.self,
@@ -25,8 +54,10 @@ struct Nutri_BalanceApp: App {
 
     var body: some Scene {
         WindowGroup {
-            MacroView()
+            MacroView().environmentObject(healthStore)
         }
         .modelContainer(sharedModelContainer)
     }
 }
+
+extension HKHealthStore: ObservableObject {}

@@ -10,6 +10,7 @@ import SwiftData
 
 @Model
 final class Macro {
+    @Attribute(.unique) var id: UUID
     let food: String
     let createdAt: Date
     let date: Date
@@ -18,6 +19,7 @@ final class Macro {
     let fats: Int
     
     init(food: String, createdAt: Date, date: Date, carbs: Int, protein: Int, fats: Int) {
+        self.id = UUID()
         self.food = food
         self.createdAt = createdAt
         self.date = date
